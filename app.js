@@ -127,6 +127,26 @@ class App{
 					}
 				});
                        
+                // Load the treasure chest model
+                const chestLoader = new GLTFLoader().setPath(self.assetsPath);
+                chestLoader.load(
+                    'treasure_chest.glb',
+                    function (chestGltf) {
+                    const treasureChest = chestGltf.scene;
+                    // Modify the treasure chest position and rotation as needed
+                    treasureChest.position.set(0, 0, 0);
+                    treasureChest.rotation.set(0, Math.PI / 2, 0);
+                    // Add the treasure chest to the college scene
+                    college.add(treasureChest);
+                    },
+                    function (xhr) {
+                    // ...
+                    },
+                    function (error) {
+                    console.log('An error happened while loading the treasure chest');
+                    }
+                );
+
                 const door1 = college.getObjectByName("LobbyShop_Door__1_");
                 const door2 = college.getObjectByName("LobbyShop_Door__2_");
                 const pos = door1.position.clone().sub(door2.position).multiplyScalar(0.5).add(door2.position);
@@ -139,6 +159,8 @@ class App{
 			
                 self.setupXR();
 			},
+        },
+
 			// called while loading is progressing
 			function ( xhr ) {
 
