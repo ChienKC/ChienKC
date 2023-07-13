@@ -143,8 +143,9 @@ class App{
                     function (gltf) {
                     const treasureBox = gltf.scene;
                     // Adjust the position and rotation of the treasure box as needed
-                    treasureBox.position.set(1, -200, 25); //1,0.5,2
-                    treasureBox.rotation.set = (0, 0, 0);
+                    treasureBox.position.set(1, -500, 25); //1,0.5,2
+                    treasureBox.rotation.set = (0, 180, 0);
+                    treasureBox.scale.set(0.5, 0.5, 0.5);
         
                     // Add the treasure box to the college scene
                     college.add(treasureBox);
