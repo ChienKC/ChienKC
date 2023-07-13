@@ -137,7 +137,7 @@ class App{
                 
                 self.loadingBar.visible = false;
 			
-                // Load the treasure box model
+                 // Load the treasure box model
                 loader.load(
                     'treasure_box.glb',
                     function (gltf) {
@@ -145,7 +145,6 @@ class App{
                     // Adjust the position and rotation of the treasure box as needed
                     treasureBox.position.set(1, 0.5, 2);
                     treasureBox.rotation.y = Math.PI / 4;
-                    treasureBox.scale.set(2, 2, 2);
         
                     // Add the treasure box to the college scene
                     college.add(treasureBox);
