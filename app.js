@@ -137,6 +137,24 @@ class App{
                 
                 self.loadingBar.visible = false;
 			
+                // Load the treasure box model
+                loader.load(
+                    'treasure_box.glb',
+                    function (gltf) {
+                    const treasureBox = gltf.scene;
+                    // Adjust the position and rotation of the treasure box as needed
+                    treasureBox.position.set(1, 0.5, 2);
+                    treasureBox.rotation.y = Math.PI / 4;
+        
+                    // Add the treasure box to the college scene
+                    college.add(treasureBox);
+                    },
+                    undefined,
+                    function (error) {
+                    console.log('An error occurred while loading the treasure box model');
+                    }
+                );
+
                 self.setupXR();
 			},
 			// called while loading is progressing
