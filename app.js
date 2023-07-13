@@ -29,7 +29,7 @@ class App{
 		this.scene = new THREE.Scene();
         this.scene.add( this.dolly );
         
-		const ambient = new THREE.HemisphereLight(0xFF0000, 0xAAAAAA, 0.6);
+		const ambient = new THREE.HemisphereLight(0xFFFF00, 0xAAAAAA, 0.6);
 		this.scene.add(ambient);
 
 		this.renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -74,7 +74,7 @@ class App{
         
         const self = this;
         
-        loader.load( './assets/hdr/night_free_Ref.hdr', ( texture ) => {
+        loader.load( './assets/hdr/venice_sunset_1k.hdr', ( texture ) => {
           const envMap = pmremGenerator.fromEquirectangular( texture ).texture;
           pmremGenerator.dispose();
 
@@ -139,8 +139,6 @@ class App{
 			
                 self.setupXR();
 			},
-        },
-
 			// called while loading is progressing
 			function ( xhr ) {
 
@@ -240,7 +238,7 @@ class App{
         if (this.proxy === undefined) return;
         
         const wallLimit = 1.3;
-        const speed = 3;
+        const speed = 1;
 		let pos = this.dolly.position.clone();
         pos.y += 1;
         
