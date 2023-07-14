@@ -181,7 +181,7 @@ class App{
                     function (gltf) {
                         const thirdTreasureBox = gltf.scene;
                         // Adjust the position and rotation of the new treasure box as needed
-                        thirdTreasureBox.position.set(1900, -10, -3000);
+                        thirdTreasureBox.position.set(1850, -10, -2900);
                         thirdTreasureBox.rotation.x = Math.PI;
                         thirdTreasureBox.scale.set(0.25, 0.25, 0.25);
                 
@@ -295,7 +295,7 @@ class App{
         if (this.proxy === undefined) return;
         
         const wallLimit = 1.3;
-        const speed = 2;
+        const speed = 1.5;
 		let pos = this.dolly.position.clone();
         pos.y += 1;
         
