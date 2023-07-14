@@ -187,14 +187,13 @@ class App{
                         thirdTreasureBox.scale.set(0.25, 0.25, 0.25);
                 
                         // Add the new treasure box to the college scene
-                        college.add(newTreasureBox);
+                        college.add(thirdTreasureBox);
                     },
                     undefined,
                     function (error) {
                         console.log('An error occurred while loading the new treasure box model');
                     }
                 );
-                
 
                 self.setupXR();
 			},
