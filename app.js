@@ -175,6 +175,25 @@ class App{
                         console.log('An error occurred while loading the new treasure box model');
                     }
                 );
+
+                loader.load(
+                    'third_treasure_box.glb',
+                    function (gltf) {
+                        const thirdTreasureBox = gltf.scene;
+                        // Adjust the position and rotation of the new treasure box as needed
+                        thirdTreasureBox.position.set(1, -10, -1500);
+                        thirdTreasureBox.rotation.x = Math.PI;
+                        thirdTreasureBox.rotation.y = Math.PI;
+                        thirdTreasureBox.scale.set(0.25, 0.25, 0.25);
+                
+                        // Add the new treasure box to the college scene
+                        college.add(newTreasureBox);
+                    },
+                    undefined,
+                    function (error) {
+                        console.log('An error occurred while loading the new treasure box model');
+                    }
+                );
                 
 
                 self.setupXR();
