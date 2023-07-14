@@ -158,23 +158,24 @@ class App{
                 );
 
                 loader.load(
-                    'treasure_box.glb',
+                    'new_treasure_box.glb',
                     function (gltf) {
-                    const treasureBox = gltf.scene;
-                    // Adjust the position and rotation of the treasure box as needed
-                    treasureBox.position.set(1, -10+1500, -1200); //1,0.5,2,y,z,x
-                    treasureBox.rotation.x = Math.PI;
-                    treasureBox.rotation.y = Math.PI;
-                    treasureBox.scale.set(0.25, 0.25, 0.25);
-        
-                    // Add the treasure box to the college scene
-                    college.add(treasureBox);
+                        const newTreasureBox = gltf.scene;
+                        // Adjust the position and rotation of the new treasure box as needed
+                        newTreasureBox.position.set(1, -10 + 1000, -1200);
+                        newTreasureBox.rotation.x = Math.PI;
+                        newTreasureBox.rotation.y = Math.PI;
+                        newTreasureBox.scale.set(0.25, 0.25, 0.25);
+                
+                        // Add the new treasure box to the college scene
+                        college.add(newTreasureBox);
                     },
                     undefined,
                     function (error) {
-                    console.log('An error occurred while loading the treasure box model');
+                        console.log('An error occurred while loading the new treasure box model');
                     }
                 );
+                
 
                 self.setupXR();
 			},
