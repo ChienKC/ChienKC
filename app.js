@@ -162,7 +162,7 @@ class App{
                     function (gltf) {
                     const treasureBox = gltf.scene;
                     // Adjust the position and rotation of the treasure box as needed
-                    treasureBox.position.set(1, -10+3000, -1200); //1,0.5,2,y,z,x
+                    treasureBox.position.set(1, -10+1500, -1200); //1,0.5,2,y,z,x
                     treasureBox.rotation.x = Math.PI;
                     treasureBox.rotation.y = Math.PI;
                     treasureBox.scale.set(0.25, 0.25, 0.25);
